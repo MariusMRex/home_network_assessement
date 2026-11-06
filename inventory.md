@@ -8,7 +8,7 @@ Network layout for the following devices is detailed in [Scope](scope.md)
 ### VLAN A
 
 | Device name | Segment | Note |
-| :---------- | :-----: | ---: |
+| :---------- | :-----: | :--- |
 | Janus | infrastructure | Dual homed network gateway |
 | Styx | infrastructure | central switch |
 | Thermopyle | infrastructure | Living room WiFi access point | 
@@ -38,7 +38,7 @@ Network layout for the following devices is detailed in [Scope](scope.md)
 ### VLAN B
 
 | Device name | Segment | Note |
-| :---------- | :-----: | ---: |
+| :---------- | :-----: | :--- |
 | freenas-backend | backend | Dual homed NAS server |
 | freenas-ipmi | backend | IPMI for NAS server |
 | br-player | backend | Blue-ray player |
@@ -47,7 +47,7 @@ Network layout for the following devices is detailed in [Scope](scope.md)
 ### External Network
 
 | Device name | Segment | Note |
-| :---------- | :-----: | ---: |
+| :---------- | :-----: | :--- |
 | Janus | public | External gateway |
 | mcloud | public | Externally available HTTPS Service | 
 
@@ -56,7 +56,7 @@ Network layout for the following devices is detailed in [Scope](scope.md)
 Some details redacted for privacy
 
 | Login | Device | Authentication method | Notes | 
-| :---- | :----: | --------------------: | :---: |
+| :---- | :----: | --------------------: | :---- |
 | m\*\*   | slim | password or ssh key | password is ${m** variant #1} | 
 | m\*\*   | Framework | password or ssh key | password is ${m** variant #1}
 | m\*\*   | argus | password or ssh key | password is ${m** variant #1} | 
@@ -67,7 +67,7 @@ Some details redacted for privacy
 File sharing from NAS 
 
 | Login | Device | Authentication method | Notes | 
-| :---- | :----: | --------------------: | :---: |
+| :---- | :----: | --------------------: | :---- |
 | m\*r\*\* | nas | password or ssh key | password is ${m** variant #1} User can also ssh into server |
 | w\*\*   | nas | password | Used for mounting network shares only.  password is ${w** variant #1} |
 
