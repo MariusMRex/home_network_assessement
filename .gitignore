@@ -16,6 +16,11 @@ Sessionx.vim
 # Temporary
 .netrwhist
 *~
+
 # Persistent undo
 [._]*.un~
 *.swp
+
+# Graphics
+*.drawio
+*.bkp

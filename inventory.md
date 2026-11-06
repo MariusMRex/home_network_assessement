@@ -4,7 +4,9 @@
 ## Hardware
 Network layout for the following devices is detailed in scope.md
 
-### Front end Network Devices
+![Initial Network Diagram](diagrams/initial-network-overview.png)
+
+### VLAN A
 
 | Device name | Segment | Note |
 | :---------- | :-----: | ---: |
@@ -34,9 +36,10 @@ Network layout for the following devices is detailed in scope.md
 | Wphone | user1 | cellphone |
 | thermostat  | user1 | smart Thermostat|
 
-### Back End Network
+### VLAN B
 
 | Device name | Segment | Note |
+| :---------- | :-----: | ---: |
 | freenas-backend | backend | Dual homed NAS server |
 | freenas-ipmi | backend | IPMI for NAS server |
 | br-player | backend | Blue-ray player |
@@ -71,6 +74,7 @@ File sharing from NAS
 ## Software
 
 | Name | Access | Note |
+| :--- | :----: | :--- |
 | Linux | User Login | |
 | BSD OS | User Login | |
 | MacOS | User Login | |
