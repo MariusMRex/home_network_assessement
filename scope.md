@@ -1,43 +1,27 @@
 # Network Audit Scope
 
-At the time of this audit this LAN has two active subnets.  
+All entities in the following network are considered to be in scope:
 
 | Subnet Designation | IP Range | IP segment | Purpose | Notes |
 | -----------------: | :------: | :--------: | :-----: | :---: |
-| Front end network | 172.18.93.0/24 | NA | Internet facing network | Divided into four logical sub blocks |
-| | | 172.18.93.0/26 | infrastructure | Routes to Internet through VPN. Has statically assigned addresses |
-| | | 172.18.93.64/26 | user1 | Routes to Internet through VPN. DHCP assigned addresses |
-| | | 172.18.93.128/26 | user2 | Routes to Internet through VPN. DHCP assigned addresses |
-| | | 172.18.93.192/26 | unmasked | Routes directly to Internet via PAT/NAT Has statically assigned addresses |
-| Back end network | 172.18.94.0/24 | backend | Local only network | Statically assigned addresses.  No Internet access |
+| VLAN A: Front end network | 172.18.x.x/24 | NA | Internet facing network | Divided into four logical sub blocks |
+| | | 172.18.x.0/26 | infrastructure | Routes to Internet through VPN. Has statically assigned addresses |
+| | | 172.18.x.64/26 | user1 | Routes to Internet through VPN. DHCP assigned addresses |
+| | | 172.18.x.128/26 | user2 | Routes to Internet through VPN. DHCP assigned addresses |
+| | | 172.18.x.192/26 | unmasked | Routes directly to Internet via PAT/NAT.  Has statically assigned addresses |
+| VLAN B: Back end network | 172.18.y.x/24 | backend | Local only network | Statically assigned addresses.  No Internet access |
+| Router External IP | public | NA | Gateway to network | Management login disabled from all external IPs |
 
-All devices on both subnets, wired and unwired, are in scope
+See the inventory.md file for a detailed list of hosts contained in each network
 
-## Front End network
+# Goal
 
-| Device name | Segment | Note |
-| :---------- | :-----: | ---: |
-| Janus | infrastructure | Dual homed network gateway |
-| Styx | infrastructure | 16 port unifi switch - central switch |
-| Thermopyle | infrastructure | Living room wifi access point | 
-| Cocytus | infrastructure | 5 port unifi switch in exercise room| 
-| freenas | infrastructure | Dual homed NAS server | 
-| Phlegethon | infrastructure | 8 port unifi switch in main office | 
-| Hippocrene | infrastructure | Wifi access point in second office | 
-| Castalian | infrastructure | Wifi access point in exercise room | 
-| Lethe | infrastructure | 5 port unifi switch in media console |
-| Archeron | infrastructure | 5 port unifi switch in second office |
+In the language if NIST CSF, the initial goal of this survey is improved governance and understanding.  
 
+1. Identify and understand all existing assets, including hardware, software, services, and sensitive data
+1. Identify and assess those assets for potential vulnerabilities
+1. Identify a risk management strategy.  What risks are acceptable?  What risks are to be mitigated? Is there residual risk left over?
+1. Identify and prioritize what changes should be made to protect the most valuable or vulnerable resources
+1. Protect the prioritized assets making modifications where necessary and feasible.  
 
-
-
-## Backend Network
-
-| Device name | Segment | Note |
-| :---------- | :-----: | ---: |
-| Janus | backend | Dual homed network gateway |
-| freenas-backend | backend | Dual homed NAS server |
-| freenas-ipmi | backend | IPMI for NAS server |
-| sony-player | backend | Blueray player |
-
-
+Future stages may involve setting up monitoring to better detect potential issues, as well as better documented response and recovery procedures.
