@@ -3,7 +3,7 @@
 All entities in the following network are considered to be in scope:
 
 | Subnet Designation | IP Range | IP segment | Purpose | Notes |
-| -----------------: | :------: | :--------: | :-----: | :---: |
+| -----------------: | :------: | :--------: | :-----: | ----: |
 | VLAN A: Front end network | 172.18.x.x/24 | NA | Internet facing network | Divided into four logical sub blocks |
 |  |  | 172.18.x.0/26 | infrastructure | Routes to Internet through VPN. Has statically assigned addresses |
 |  |  | 172.18.x.64/26 | user1 | Routes to Internet through VPN. DHCP assigned addresses |
@@ -12,7 +12,7 @@ All entities in the following network are considered to be in scope:
 | VLAN B: Back end network | 172.18.y.x/24 | backend | Local only network | Statically assigned addresses.  No Internet access |
 | Router External IP | public | NA | Gateway to network | Management login disabled from all external IPs |
 
-See the inventory.md file for a detailed list of hosts contained in each network
+See the [Inventory](inventory.md) file for a detailed list of hosts contained in each network
 
 # Goal
 

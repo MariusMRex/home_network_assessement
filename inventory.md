@@ -2,9 +2,8 @@
 # Inventory
 
 ## Hardware
-Network layout for the following devices is detailed in scope.md
+Network layout for the following devices is detailed in [Scope](scope.md)
 
-![Initial Network Diagram](diagrams/initial-network-overview.png)
 
 ### VLAN A
 
@@ -44,6 +43,7 @@ Network layout for the following devices is detailed in scope.md
 | freenas-ipmi | backend | IPMI for NAS server |
 | br-player | backend | Blue-ray player |
 
+![Initial Network Diagram](diagrams/initial-network-overview.png)
 ### External Network
 
 | Device name | Segment | Note |
@@ -89,8 +89,8 @@ File sharing from NAS
 | Smart bulbs | API key paired with phone app | Accessible on front end LAN |
 
 ## Notable Data Stores
-* Archive of photography business photos on NAS
-* Music library stored on NAS
-* Archive of secrets on NAS (GPG Encrypted)
-* System backups on NAS
-* Configuration backup for NAS, on slim
+1. Archive of photography business photos on NAS
+1. Music library stored on NAS
+1. Archive of secrets on NAS (GPG Encrypted)
+1. System backups on NAS
+1. Configuration backup for NAS, on slim
